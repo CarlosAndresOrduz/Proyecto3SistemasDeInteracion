@@ -1,5 +1,8 @@
 # Miniproyecto 4 - Sistemas de Interacción
 
+## Carlos Andres Orduz Guacaneme
+> LINK: **Pendiente**
+
 ## P1 - Control Básico (Sliders, Switches, Botones)
 Funcionalidades principales de control de audio:
 
