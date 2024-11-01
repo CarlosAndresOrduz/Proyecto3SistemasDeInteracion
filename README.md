@@ -1,83 +1,55 @@
 # Miniproyecto 4 - Sistemas de Interacción
 
 ## Carlos Andres Orduz Guacaneme
-> LINK: **Pendiente**
+> LINK: **https://youtu.be/tIA9TS8uaZY**
 
-## P1 - Control Básico (Sliders, Switches, Botones)
-Funcionalidades principales de control de audio:
+## P1 - Control de Grabación y Efectos (Sliders, Switches, Botones)
+Funcionalidades de control de audio en la primera página:
 
 ### 4 Sliders:
-- **Volumen**: Controla la ganancia del audio.  
-- **Velocidad**: Ajusta la velocidad de reproducción.  
-- **Tonos altos**: Aumenta o reduce la amplitud de las frecuencias altas (EQ).  
-- **Tonos bajos**: Aumenta o reduce la amplitud de las frecuencias bajas (EQ).  
-
-> **Nota**: Los sliders de tonos altos y bajos no cambian la frecuencia, sino que ajustan la amplitud de un rango de frecuencias específico.
+- **Volumen Grabación**: Ajusta el volumen general de la grabación.
+- **Efecto Eco**: Controla la intensidad del efecto de eco.
+- **Volumen Eco**: Ajusta el volumen del eco, modificando su presencia en la mezcla.
+- **Velocidad Base**: Cambia la velocidad de reproducción de la base rítmica en la página 3.
 
 ### 3 Switches (ON/OFF):
-- **Activar/Desactivar base**: Habilita o silencia la base rítmica.  
-- **Activar/Desactivar inicio de bucle**: Marca el punto inicial del bucle.  
-- **Activar/Desactivar fin de bucle**: Marca el punto final del bucle.
+- **Detener Grabación (de 0)**: Detiene la grabación actual cuando ya está en proceso.
+- **Activar Metrónomo**: Habilita el metrónomo para mantener el ritmo.
+- **Sonido Prueba Eco**: Permite probar el efecto de eco en tiempo real.
 
 ### 3 Botones:
-- **Volver al inicio del bucle**: Devuelve la reproducción al punto inicial del bucle.  
-- **Pausar**: Pausa toda la reproducción.  
-- **Reanudar**: Reanuda toda la reproducción.  
+- **Abrir Grabación (de 0)**: Inicia una nueva grabación desde cero.
+- **Iniciar Grabación (de 0)**: Comienza a grabar el audio desde el inicio.
+- **Reproducir Grabación (ya grabada)**: Reproduce la última grabación almacenada.
 
 ---
 
-## P2 - Modulación Avanzada (Frecuencia y Forma de Onda)
-Página dedicada a la manipulación avanzada de sonido mediante controles de frecuencia y forma de onda.
+## P2 - Modulación Avanzada (Frecuencia y Amplitud)
+Página de modulación avanzada mediante los ejes de frecuencia y amplitud.
 
 ### 2 Ejes de Control:
-- **Eje X**: Controla la frecuencia del sonido, permitiendo subir o bajar el tono.  
-- **Eje Y**: Modifica la forma de la onda:  
-  - **Centro**: Onda sinusoidal (sonido suave).  
-  - **Hacia arriba**: Onda cuadrada (sonido más agresivo).  
-  - **Hacia abajo**: Onda triangular (sonido más tenue).  
+- **Eje Y (Frecuencia)**: Ajusta la frecuencia del sonido para cambiar el tono.
+- **Eje X (Amplitud)**: Modifica la amplitud del sonido para variar el volumen percibido.
 
 ---
 
 ## P3 - Gestión de Base (Switches Rítmicos)
-Página dedicada a la creación y manipulación de patrones de percusión.
+Controles de base rítmica que permiten crear patrones de percusión en un compás.
 
-### 24 Switches organizados en 4 columnas (6 switches por columna):
-- **Cada columna representa un tiempo del compás (4/4)**:
-  - Columna 1: Tiempo 1  
-  - Columna 2: Tiempo 2  
-  - Columna 3: Tiempo 3  
-  - Columna 4: Tiempo 4  
-
-- **Cada fila corresponde a un sonido de percusión**:
-  - Fila 1: Bombo  
-  - Fila 2: Caja  
-  - Fila 3: Hi-hat abierto  
-  - Fila 4: Hi-hat cerrado  
-  - Fila 5: Clap  
-  - Fila 6: Platillo  
-
-**Función**:  
-Cuando un switch se activa, su sonido correspondiente se reproduce en ese tiempo del compás.
-
-> **Nota**: Todos los sonidos deben ser generados en Pure Data, evitando el uso de samples pregrabados.
+### 24 Switches organizados en 4 columnas (6 instrumentos de percusión por columna):
+  
+**Función**: Al activar un switch, se programa el instrumento seleccionado para que se reproduzca en el tiempo asignado, permitiendo crear bases rítmicas con variaciones y repeticiones hasta que el usuario lo desee.
 
 ---
 
-## P4 - Gestión de Sonidos (Botones por Instrumento)
-Página dedicada a seleccionar y gestionar sonidos de diferentes instrumentos.
+## P4 - Gestión de Sonidos (Botones de Piano y Efectos de Sonido)
+Página dedicada a la reproducción de sonidos específicos por instrumento.
 
-### 24 Botones organizados en 4 columnas (6 botones por columna):
-- **Cada columna representa un instrumento**:
-  - Columna 1: Piano  
-  - Columna 2: Synth  
-  - Columna 3: Guitarra eléctrica  
-  - Columna 4: Bajo  
+### 24 Botones organizados en 2 grupos:
+- **12 botones para sonidos de piano**: Cada botón representa un sonido específico del piano.
+- **12 botones para efectos de sonido**: Cada botón permite activar un efecto de sonido específico.
 
-- **Cada botón representa un sonido distinto**:
-  - Ejemplo: Los botones del piano podrían activar diferentes acordes mayores o menores.
-
-**Función**:  
-Al presionar un botón, se reproduce el sonido asignado al instrumento.
+**Función**: Al presionar un botón, se reproduce el sonido asignado, permitiendo explorar diversos timbres y efectos.
 
 ---
 
@@ -91,10 +63,11 @@ Al presionar un botón, se reproduce el sonido asignado al instrumento.
 ---
 
 ## Descripción del Proyecto
-Usando la app **OSC Controller** (Open Sound Control) y el lenguaje **PureData (PD)**, se debe implementar un sistema de DJ. La idea es utilizar todos los widgets disponibles en la app (sliders y botones), asegurando que cada interacción tenga una respuesta auditiva en PD. El objetivo es permitir la creación de piezas de música electrónica al estilo de un DJ.
+Usando la app **OSC Controller** (Open Sound Control) y el lenguaje **Pure Data (PD)**, se debe implementar un sistema de DJ. La idea es utilizar todos los widgets disponibles en la app (sliders y botones), asegurando que cada interacción tenga una respuesta auditiva en PD. El objetivo es permitir la creación de piezas de música electrónica al estilo de un DJ.
 
 ### Limitantes:
 - Debe utilizarse **OSC** y **Pure Data**.  
 - Se deben emplear diferentes interacciones ofrecidas por OSC (sliders, botones, etc.).  
 - Todas las interacciones deben afectar el audio en PD.  
 - Se debe subir un **video a YouTube** de no más de 5 minutos donde se muestre el funcionamiento del sistema (demo con una canción).
+
